@@ -18,7 +18,7 @@ use Livewire\Component;
 use Livewire\WithPagination;
 use Mediconesystems\LivewireDatatables\Column;
 use Mediconesystems\LivewireDatatables\ColumnSet;
-use Mediconesystems\LivewireDatatables\Exports\DatatableExport;
+// use Mediconesystems\LivewireDatatables\Exports\DatatableExport;
 use Mediconesystems\LivewireDatatables\Traits\WithCallbacks;
 use Mediconesystems\LivewireDatatables\Traits\WithPresetDateFilters;
 use Mediconesystems\LivewireDatatables\Traits\WithPresetTimeFilters;
@@ -1653,9 +1653,9 @@ class LivewireDatatable extends Component
     {
         $this->forgetComputed();
 
-        $export = new DatatableExport($this->getExportResultsSet());
+        // $export = new DatatableExport($this->getExportResultsSet());
 
-        return $export->download();
+        // return $export->download();
     }
 
     public function getExportResultsSet()
@@ -1787,15 +1787,15 @@ class LivewireDatatable extends Component
         $collection = collect($action);
 
         if ($collection->get('isExport')) {
-            $datatableExport = new DatatableExport($this->getExportResultsSet());
+            // $datatableExport = new DatatableExport($this->getExportResultsSet());
 
-            $datatableExport->setFileName($collection->get('fileName'));
+            // $datatableExport->setFileName($collection->get('fileName'));
 
-            $datatableExport->setStyles($collection->get('styles'));
+            // $datatableExport->setStyles($collection->get('styles'));
 
-            $datatableExport->setColumnWidths($collection->get('widths'));
+            // $datatableExport->setColumnWidths($collection->get('widths'));
 
-            return $datatableExport->download();
+            // return $datatableExport->download();
         }
 
         if (! count($this->selected)) {
